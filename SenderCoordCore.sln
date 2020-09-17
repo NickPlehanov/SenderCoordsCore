@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderCoordCore", "SenderCoordCore.csproj", "{95FA819D-5BD3-4203-B443-73E8E1E7D346}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95FA819D-5BD3-4203-B443-73E8E1E7D346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FA819D-5BD3-4203-B443-73E8E1E7D346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FA819D-5BD3-4203-B443-73E8E1E7D346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FA819D-5BD3-4203-B443-73E8E1E7D346}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FD90F9C-FA00-4AE3-A298-DFE25B5B9642}
+	EndGlobalSection
+EndGlobal
