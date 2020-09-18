@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SenderCoordCore.Models.Contexts;
+using SenderCoordCore.Context;
 
 namespace SenderCoordCore {
     public class Startup {
@@ -17,6 +17,8 @@ namespace SenderCoordCore {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddDbContext<CoordsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CoordsDBConnection")));
+            services.AddControllers();
+            services.AddMvc();
             //services.AddControllers();
         }
 
@@ -32,15 +34,15 @@ namespace SenderCoordCore {
 
             app.UseAuthorization();
 
-            //app.UseEndpoints(endpoints => {
-            //    endpoints.MapControllers();
-            //});
-            //app.UseEndpoints(endpoints => {
-            //    endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
-            //});            
             app.UseEndpoints(endpoints => {
-                endpoints.MapControllerRoute("default", "{controller}/{action}");
+                endpoints.MapControllers();
             });
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+            });
+            //app.UseEndpoints(endpoints => {
+            //    endpoints.MapControllerRoute("default", "{controller}/{action}");
+            //});
         }
     }
 }
