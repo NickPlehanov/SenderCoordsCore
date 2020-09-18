@@ -1,9 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 namespace SenderCoordCore.Models.Contexts {
-    public class CoordsContext : DbContext {
-        public CoordsContext(){}
-        public CoordsContext(DbContextOptions<CoordsContext> options) : base(options) { }
+    public partial class CoordsContext : DbContext {
+
+        public CoordsContext() { }
+
+        public CoordsContext(DbContextOptions<CoordsContext> option) : base(option) { }
+
+        private readonly CoordsContext _context;
+        public CoordsContext(CoordsContext context) {
+            _context = context;
+        }
+
 
         public virtual DbSet<Coords> Coords { get; set; }
     }
